@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration debug="false">
+	<appender name="stdout"
+		class="ch.qos.logback.core.ConsoleAppender">
+		<encoder>
+			<pattern>%d{yyyy-MM-ddTHH:mm:ss.SSS} TRAINING %X{diagnosticId} %-5level %-24logger{24} - %-16M{16} - %m%n</pattern>
+		</encoder>
+	</appender>
+	<logger name="com.learning.ark.training" level="DEBUG" additivity="true" />
+	<logger name="org.springframework" level="ERROR"
+		additivity="true" />
+	<root level="DEBUG">
+		<appender-ref ref="stdout" />
+	</root>
+	<root level="ERROR">
+		<appender-ref ref="stdout" />
+	</root>
+</configuration>
